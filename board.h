@@ -16,14 +16,14 @@ Board(void);
  *
  *@return A Piece[] representing the current layout
  */
-Piece[] GetLayout();
+Piece[] GetLayout() = 0;
 
 /*@brief Changes a tile at the given index to the given Piece
  *
  *@param player [in] - The Piece representing whose turn it is
  *@param index [in] - The position where we are placing the peice
  */
-void Move(Piece player, int index);
+void Move(Piece player, int index) = 0;
 
 /*@brief Returns the status of the current board
  *
@@ -32,7 +32,7 @@ void Move(Piece player, int index);
  *@return -1: O player has won the game
  *@return 3: the game is a tie 
  */
-int Status();
+int Status() = 0;
 
 private:
 
